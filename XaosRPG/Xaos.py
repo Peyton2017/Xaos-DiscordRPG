@@ -19,8 +19,6 @@ try:
 except ImportError:
     print("Discord.py is not installed. Please install it!")
     sys.exit(5)
-if not discord.opus.is_loaded():
-    discord.opus.load_opus('opus')
 
 starttime = time.time()
 

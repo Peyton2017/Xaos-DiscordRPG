@@ -1,7 +1,6 @@
 import asyncio
 import sys
 from tools.dataIO import fileIO
-from tools.settings import Settings
 import threading
 import datetime
 import time

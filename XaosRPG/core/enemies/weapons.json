@@ -1,0 +1,34 @@
+{
+    "Simple Bow" : {
+        "min_dmg" : 5,
+        "max_dmg" : 25
+    },
+    "Simple Sword" : {
+        "min_dmg" : 5,
+        "max_dmg" : 25
+    },
+    "Simple Dagger" : {
+        "min_dmg" : 5,
+        "max_dmg" : 25
+    },
+    "Simple Staff" : {
+        "min_dmg" : 5,
+        "max_dmg" : 25
+    },
+    "Sprine Sword" : {
+        "min_dmg" : 10,
+        "max_dmg" : 60
+    },
+    "Sprine Dagger" : {
+        "min_dmg" : 10,
+        "max_dmg" : 60
+    },
+    "Sprine Staff" : {
+        "min_dmg" : 10,
+        "max_dmg" : 60
+    },
+    "Sprine Bow" : {
+        "min_dmg" : 10,
+        "max_dmg" : 60
+    }
+}

@@ -1,0 +1,118 @@
+{
+    "locations" : {
+        "Golden Temple" : {
+            "enemies" : {
+                "Rachi" : {
+                    "min_health" : 50,
+                    "max_health" : 75,
+                    "min_dmg" : 0,
+                    "max_dmg" : 10,
+                    "min_drop" : 25,
+                    "max_drop" :  40,
+                    "min_xp" : 5,
+                    "max_xp" : 10,
+                    "items" : []
+                },
+                "Debin" : {
+                    "min_health" : 50,
+                    "max_health" : 100,
+                    "min_dmg" : 0,
+                    "max_dmg" : 20,
+                    "min_drop" : 25,
+                    "max_drop" :  50,
+                    "min_xp" : 5,
+                    "max_xp" : 20,
+                    "items" : []
+                },
+                "Oofer" : {
+                    "min_health" : 75,
+                    "max_health" : 125,
+                    "min_dmg" : 0,
+                    "max_dmg" : 30,
+                    "min_drop" : 35,
+                    "max_drop" :  70,
+                    "min_xp" : 10,
+                    "max_xp" : 25,
+                    "items" : []
+                }
+            },
+            "pets" : []
+        },
+        "Saker Keep" : {
+            "enemies" : {
+                "Draugr" : {
+                    "min_health" : 50,
+                    "max_health" : 75,
+                    "min_dmg" : 0,
+                    "max_dmg" : 10,
+                    "min_drop" : 25,
+                    "max_drop" :  40,
+                    "min_xp" : 5,
+                    "max_xp" : 10,
+                    "items" : []
+                },
+                "Stalker" : {
+                    "min_health" : 50,
+                    "max_health" : 100,
+                    "min_dmg" : 0,
+                    "max_dmg" : 20,
+                    "min_drop" : 25,
+                    "max_drop" :  50,
+                    "min_xp" : 5,
+                    "max_xp" : 20,
+                    "items" : []
+                },
+                "Souleater" : {
+                    "min_health" : 75,
+                    "max_health" : 125,
+                    "min_dmg" : 0,
+                    "max_dmg" : 30,
+                    "min_drop" : 35,
+                    "max_drop" :  70,
+                    "min_xp" : 10,
+                    "max_xp" : 25,
+                    "items" : []
+                }
+            },
+            "pets" : []
+        },
+        "The Forest" : {
+            "enemies" : {
+                "Wolf" : {
+                    "min_health" : 150,
+                    "max_health" : 200,
+                    "min_dmg" : 10,
+                    "max_dmg" : 40,
+                    "min_drop" : 40,
+                    "max_drop" :  90,
+                    "min_xp" : 10,
+                    "max_xp" : 30,
+                    "items" : []
+                },
+                "Goblin" : {
+                    "min_health" : 125,
+                    "max_health" : 150,
+                    "min_dmg" : 10,
+                    "max_dmg" : 60,
+                    "min_drop" : 40,
+                    "max_drop" :  140,
+                    "min_xp" : 10,
+                    "max_xp" : 30,
+                    "items" : []
+                },
+                "Zombie" : {
+                    "min_health" : 175,
+                    "max_health" : 225,
+                    "min_dmg" : 10,
+                    "max_dmg" : 40,
+                    "min_drop" : 40,
+                    "max_drop" :  90,
+                    "min_xp" : 10,
+                    "max_xp" : 30,
+                    "items" : []
+                }
+            },
+            "pets" : []
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "Admin" : [],
+    "Commands_used" : 0,
+    "Owner" : [
+        "Put your discord ID here"
+    ],
+    "Prefix" : ">",
+    "Shards" : 1,
+    "Token" : "Put bot token here"
+}

@@ -16,7 +16,7 @@ A fun Discord RPG made in Python.
 8) Type "python3 Xaos.py" to run the bot.
 9) Enjoy!
 
-#Having issues?
+# Having issues?
 1) Open your Terminal/CMD
 2) Paste in "python3 -m pip install -U https://github.com/Rapptz/discord.py/archive/master.zip#egg=discord.py[voice]"
 3) Let it run.

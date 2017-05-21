@@ -235,6 +235,10 @@ async def fight(ctx):
                 info["enemieskilled"] = info["enemieskilled"] + 1
                 fileIO("players/{}/info.json".format(author.id), "save", info)
                 await _check_levelup(ctx)
+            else:
+                info["enemyhp"] = enemy_hp_after
+                info["health"] = user_hp_after
+                fileIO("players/{}/info.json".format(author.id), "save", info)
         else:
             await ctx.send("Please choose one of the skills next time!")
 

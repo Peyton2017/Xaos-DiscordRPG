@@ -18,7 +18,7 @@ A fun Discord RPG made in Python.
 
 # Having issues?
 1) Open your Terminal/CMD
-2) Paste in "python3 -m pip install -U https://github.com/Rapptz/discord.py/archive/master.zip#egg=discord.py[voice]"
+2) Paste in "python3 -m pip install -U https://github.com/Rapptz/discord.py/archive/rewrite.zip#egg=discord.py[voice]"
 3) Let it run.
 
 # Still having issues?

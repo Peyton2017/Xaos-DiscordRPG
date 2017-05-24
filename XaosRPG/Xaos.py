@@ -31,9 +31,17 @@ Prefix = config_location["Prefix"]
 
 bot = commands.AutoShardedBot(shard_count = Shards, command_prefix=Prefix)
 
+bot.remove_command('help')
+
 @bot.event
 async def on_ready():
     print("Login info:\nUser: {}\nUser ID: {}".format(bot.user.name, bot.user.id))
+
+@bot.command()
+async def help(ctx):
+    author = ctx.author
+    em = discord.Embed(description="**Commands:**\n\n1) {}help | **Shows this message.**\n\n2) {}start | **Start your player on Xaos!**\n\n3) {}fight | **Fight enemies.**\n\n4) {}daily | **Claim your daily reward!**\n\n5) {}stats | **View your player stats.**\n\n6) {}inv | **View your inventory.**\n\n7) {}buy | **Buy items.**\n\n8) {}mine | **Mine some Ore.**\n\n9) {}chop | **Chop some trees.**\n\n10) {}travel | **Travel to other locations.**\n\n11) {}rest | **Rest your player and gain HP**\n\n12) {}heal | **Heal with health potions.**\n\n13) {}equip | **Equip items you have in your inventory.**\n\n14) {}info | **Show bot info.**".format(Prefix, Prefix, Prefix, Prefix, Prefix, Prefix, Prefix, Prefix, Prefix, Prefix, Prefix, Prefix, Prefix, Prefix), color=discord.Color.blue())
+    await ctx.send(embed=em)
 
 @bot.event
 async def on_command(command):
@@ -317,7 +325,7 @@ async def lootbag(ctx):
         await asyncio.sleep(5)
         chance = random.randint(1, 3)
         goldmul = random.randint(10, 30)
-        goldgain = goldmul * userinfo["lvl"]
+        goldgain = goldmul * info["lvl"]
         if chance == 3:
             em = discord.Embed(description="```diff\n+ The Lootbag obtained {} Gold!```".format(goldgain), color=discord.Color.blue())
             await ctx.send(embed=em)
@@ -334,6 +342,7 @@ async def lootbag(ctx):
 async def travel(ctx):
     channel = ctx.channel
     author = ctx.author
+    message = ctx.message
     await _create_user(author)
     info = fileIO("players/{}/info.json".format(author.id), "load")
     if info["race"] and info["class"] == "None":
@@ -643,6 +652,10 @@ async def mine(ctx):
         await ctx.send(embed=em)
 
 @bot.command()
+async def update(ctx):
+    await _check_levelup(ctx)
+
+@bot.command()
 async def chop(ctx):
     channel = ctx.channel
     author = ctx.author
@@ -676,7 +689,6 @@ async def chop(ctx):
 #--------------------------------------------------------------------------#
 async def _check_levelup(ctx):
     author = ctx.author
-    message = ctx.messsage
     info = fileIO("players/{}/info.json".format(author.id), "load")
     xp = info["exp"]
     num = 100
@@ -687,8 +699,9 @@ async def _check_levelup(ctx):
         await ctx.send("```diff\n+ {} gained a level!```".format(name))
         info["lvl"] = info["lvl"] + 1
         fileIO("players/{}/info.json".format(author.id), "save", info)
+        return await _check_levelup(ctx)
     else:
-        return
+        pass
 
 async def _pick_class(ctx):
     author = ctx.author

@@ -23,5 +23,5 @@ A fun Discord RPG made in Python.
 
 # Still having issues?
 1) Join https://discord.gg/Gv46ggF
-2) Contact Luxxy#1531
+2) Contact Nishimiya#1531
 3) Be patient. 
